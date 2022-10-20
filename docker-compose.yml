@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  duckdns:
+    image: linuxserver/duckdns
+    container_name: DUCKDNS
+    environment:
+      - TZ=America/Santo Domingo
+      - SUBDOMAINS=yourSubdomain
+      - TOKEN=YourDuckDnsToken
+      - LOG_FILE=true
+    volumes:
+      - /docker/tools/duckdns:/config
+    restart: always
